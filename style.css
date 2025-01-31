@@ -1,0 +1,92 @@
+/* Reset and Global Styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background: linear-gradient(135deg, rgb(62, 69, 75), rgb(45, 50, 55));
+    font-family: Arial, sans-serif;
+    height: 100%;
+    
+}
+
+/* Header Container */
+.header {
+    background: linear-gradient(135deg, rgb(62, 69, 75), rgb(45, 50, 55));
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end; 
+    border-bottom: 1px solid rgba(211, 204, 204, 0.3); /* Subtle border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* border shadow*/
+
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.header-button {
+    font-size: 20px;
+    color: rgb(211, 204, 204);
+    background-color: transparent;
+    padding: 5px 15px; 
+    cursor: pointer;
+    border: none;
+
+}
+
+.header-button:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(115, 115, 244);
+}
+
+
+/* Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Automatically adjust columns */
+    gap: 20px; /* Maintain spacing between items */
+    width: 50%; /* Use a relative width for flexibility */
+    max-width: 1200px; /* Set a max width for large screens */
+    margin: 50px auto; /* Center the grid container */
+}
+
+/* Individual Box Styling */
+.box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(211, 204, 204);
+    font-size: 40px;
+    cursor: pointer;
+    padding: 20px; /* Space inside each box */
+    background: transparent;
+    transition: transform 0.2s; /* Add a subtle animation */
+}
+
+/* Hover Effect */
+.box:hover {
+    color: rgb(115, 115, 244);
+    background-color: rgba(115, 115, 244, 0.1);
+    transform: scale(1.05); /* zoom-in effect */
+}
+
+/* Folder Icon Styling */
+.box i {
+    font-size: 100px; /* Adjust icon size here */
+}
+
+/* Label Styling */
+.label {
+    position: absolute;
+    bottom: 5px; 
+    font-size: 14px;
+    color: rgb(211, 204, 204);
+}
