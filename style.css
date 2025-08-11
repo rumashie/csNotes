@@ -8,16 +8,19 @@
     padding: 0;
 }
 
-html, body {
-    background: linear-gradient(135deg, rgb(62, 69, 75), rgb(45, 50, 55));
+body {
+    /* background: linear-gradient(135deg, rgb(62, 69, 75), rgb(45, 50, 55)); */
+    background-color: white;
     font-family: Arial, sans-serif;
     height: 100%;
+    
     
 }
 
 /* Header Container */
 .header {
-    background: linear-gradient(135deg, rgb(62, 69, 75), rgb(45, 50, 55));
+    /* background: linear-gradient(135deg, rgb(62, 69, 75), rgb(45, 50, 55)); */
+    background-color: white;
     padding: 20px;
     display: flex;
     justify-content: flex-end; 
@@ -33,7 +36,7 @@ html, body {
 
 .header-button {
     font-size: 20px;
-    color: rgb(211, 204, 204);
+    color: rgb(0, 0, 0);
     background-color: transparent;
     padding: 5px 15px; 
     cursor: pointer;
@@ -88,5 +91,6 @@ html, body {
     position: absolute;
     bottom: 5px; 
     font-size: 14px;
-    color: rgb(211, 204, 204);
+    /* color: rgb(211, 204, 204); */
+    color: rgb(122, 118, 118);
 }
