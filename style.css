@@ -10,8 +10,9 @@
 
 body {
     /* background: linear-gradient(135deg, rgb(62, 69, 75), rgb(45, 50, 55)); */
-    background-color: white;
-    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    font-family: 'Georgia', serif;
+    /* font-family: Arial, sans-serif; */
     height: 100%;
     
     
@@ -39,14 +40,16 @@ body {
     color: rgb(0, 0, 0);
     background-color: transparent;
     padding: 5px 15px; 
-    cursor: pointer;
+    
     border: none;
 
 }
 
 .header-button:hover {
-    color: rgb(255, 255, 255);
-    background-color: rgb(115, 115, 244);
+    cursor: pointer;
+    /* color: rgb(255, 255, 255); */
+    /* background-color: rgb(115, 115, 244); */
+    background-color: rgb(248, 248, 248);
 }
 
 
@@ -62,22 +65,28 @@ body {
 
 /* Individual Box Styling */
 .box {
-    position: relative;
+    width: 60px;
+    height: 60px;
+    margin-top: 67px;
+    margin-left: 50px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: rgb(211, 204, 204);
-    font-size: 40px;
+    color: rgb(198, 198, 198);
+    font-size: 20px; /* Slightly smaller so it fits */
     cursor: pointer;
-    padding: 20px; /* Space inside each box */
     background: transparent;
-    transition: transform 0.2s; /* Add a subtle animation */
-}
+    transition: transform 0.2s;
+  }
+  
 
 /* Hover Effect */
 .box:hover {
+    /* color: #000; */
     color: rgb(115, 115, 244);
-    background-color: rgba(115, 115, 244, 0.1);
+    /* background-color: rgba(115, 115, 244, 0.1); */
+    background-color: rgb(248, 248, 248);
     transform: scale(1.05); /* zoom-in effect */
 }
 
@@ -88,9 +97,10 @@ body {
 
 /* Label Styling */
 .label {
-    position: absolute;
-    bottom: 5px; 
+    margin-top: 5px;
+    /* text-align: center;     */
+    /* bottom: 5px;  */
     font-size: 14px;
     /* color: rgb(211, 204, 204); */
-    color: rgb(122, 118, 118);
+    color: rgb(0, 0, 0);
 }
