@@ -87,3 +87,21 @@ body {
     /* color: rgb(211, 204, 204); */
     color: rgb(0, 0, 0);
 }
+
+
+/* Notes Page Styling */
+.notes-header{
+    margin: 5px;
+    color: black;
+
+}
+
+#folder-title{
+    margin: 15px;
+}
+
+#content {
+    margin: 20px;
+    padding: 10px;
+
+}
