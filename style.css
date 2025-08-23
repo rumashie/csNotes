@@ -44,7 +44,6 @@ body {
 }
 
 
-
 /* Individual Box Styling */
 .box {
     width: 60px;
@@ -62,7 +61,6 @@ body {
     background: transparent;
     transition: transform 0.2s;
   }
-  
 
 /* Hover Effect */
 .box:hover {
@@ -93,14 +91,10 @@ body {
 .notes-header{
     margin: 5px;
     color: black;
-
 }
 
-#folder-title{
-    margin: 15px;
-}
 
-#content {
+#content, #folder-title{
     margin: 20px;
     padding: 10px;
 
