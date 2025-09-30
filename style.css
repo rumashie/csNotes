@@ -89,13 +89,16 @@ body {
 
 /* Notes Page Styling */
 .notes-header{
-    margin: 5px;
+    display: block;
+    padding: 15px;
+    text-decoration: none;
     color: black;
 }
 
 
 #content, #folder-title{
-    margin: 20px;
+    margin: 10px;
+    display: block;
     padding: 10px;
 
 }
