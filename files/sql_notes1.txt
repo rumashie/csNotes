@@ -1,3 +1,0 @@
-rdbs
-select
-ddl dml
