@@ -5,14 +5,8 @@ const folderData = {
         description: "Database queries and SQL reference materials",
         files: [ // Changed from 'file' to 'files' array
             {
-                name: "SQL Complete Guide",
-                filename: "web_dev.txt",
-                description: "SQL notes covering basics to advanced topics",
-                type: "txt",
-            },
-            {
-                name: "Advanced Queries",
-                filename: "sql_notes1.txt",
+                name: "sql notes 1",
+                filename: "sql_notes1.pdf",
                 description: "Complex SQL queries and optimization techniques",
                 type: "txt",
             }

@@ -95,10 +95,9 @@ body {
     color: black;
 }
 
-
 #content, #folder-title{
-    margin: 10px;
     display: block;
-    padding: 10px;
+    margin: 20px;
+
 
 }
