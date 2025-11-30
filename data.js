@@ -12,6 +12,19 @@ const folderData = {
             }
         ]
     },
+    python: {
+        title: "Python Notes",
+        description: "Basic Syntax, Dictionaries, pandas, lists, strings",
+        files: [
+            {
+                name: "python notes 1",
+                filename: "python_notes1.pdf",
+                description: "basic python notes",
+                type: "pdf",
+            }
+        ]
+
+    },
 };
 
 // Get the folder parameter from URL (e.g., ?folder=sql)
@@ -27,30 +40,31 @@ function loadFolderContent() {
     const folder = getUrlParameter('folder');
     console.log('Folder requested:', folder);
     
-    // Step 2: Get the data for that folder from data.js
+    // Step 2: Get the data for that folder from folderData dictionary
     const data = folderData[folder];
     console.log('Folder data:', data);
     
-    // Step 3: If folder doesn't exist, show error
+    // Error Handling: If folder doesn't exist, show error
     if (!data) {
         document.getElementById('folder-title').textContent = 'Folder Not Found';
         document.getElementById('content').innerHTML = '<p>The requested folder could not be found.</p>';
         return;
     }
 
-    // Step 4: Update page title and header with folder info
+    // Step 3: Update page title and header with data in folder info
     document.getElementById('page-title').textContent = data.title;
     document.getElementById('folder-title').textContent = data.title;
     // document.getElementById('folder-description').textContent = data.description;
     
-    // Step 5: Create file links for ALL files (updated to handle multiple files)
+    // Step 4: Create file links for ALL files found in folder data. Lists them in bullet points
     const files = data.files; // Now it's an array
     let fileLinks = '<ul>';
     
+    // For each file found in the folderData, link the notes that are in the files folder
     files.forEach(file => {
         fileLinks += `
             <li>
-                <a href="files/${file.filename}" target="_blank">
+                <a href="files/${file.filename}" target="_blank"> 
                     ${file.name}
                 </a>
             </li>
@@ -59,7 +73,7 @@ function loadFolderContent() {
     
     fileLinks += '</ul>';
     
-    // Step 6: Put the file links on the page
+    // Step 5: Actual DOM, Put the file links on the notes.html?folder={folder}
     document.getElementById('content').innerHTML = fileLinks;
 }
 
