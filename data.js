@@ -6,9 +6,9 @@ const folderData = {
         files: [ // Changed from 'file' to 'files' array
             {
                 name: "sql notes 1",
-                filename: "sql_notes1.pdf",
+                filename: "sql_notes1.md",
                 description: "basic sql notes",
-                type: "pdf",
+                type: "markdown",
             }
         ]
     },
