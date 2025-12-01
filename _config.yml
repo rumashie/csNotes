@@ -1,0 +1,6 @@
+title: my notes
+remote_theme: just-the-docs/just-the-docs
+color_scheme: light
+
+kramdown:
+  syntax_highlighter: rouge
