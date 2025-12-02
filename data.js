@@ -7,6 +7,7 @@ const folderData = {
             {
                 name: "sql notes 1",
                 filename: "sql_notes1.html",
+                filelink: "https://github.com/rumashie/csNotes/blob/main/files/sql_notes1.md",
                 description: "basic sql notes",
                 type: "markdown",
             }
@@ -64,7 +65,7 @@ function loadFolderContent() {
     files.forEach(file => {
         fileLinks += `
             <li>
-                <a href="files/${file.filename}" target="_blank"> 
+                <a href="files/${file.filelname}" target="_blank"> 
                     ${file.name}
                 </a>
             </li>

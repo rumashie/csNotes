@@ -101,12 +101,31 @@ body {
     display: block;
     padding: 15px;
     text-decoration: none;
-    color: black;
+    color: #5c7cfa;
+    font-weight: bold;
 }
 
 #content, #folder-title{
     display: block;
     margin: 20px;
+}
 
+#content ul {
+    list-style: none;
+    padding: 0;
+}
 
+#content a {
+    display: block;
+    padding: 10px;
+    margin: 8px 0;
+    background: white;
+    border-left: 3px solid #5c7cfa;
+    text-decoration: none;
+    color: #333;
+}
+
+#content a:hover {
+    background: #f0f4ff;
+    padding-left: 15px;
 }
