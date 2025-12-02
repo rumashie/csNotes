@@ -61,7 +61,7 @@ SELECT * FROM table_name WHERE column LIKE '%xyz_';
 
 
 **Group By**: groups rows that have the same balues into summary rows. GROUP BY statements are often used with aggregate functions to group result-set by one or more columns.
-- When you use GROUP BY, every column you select must be inside of an aggregate function OR in the GROUP BY clause. Since GROUP BY is grouping/combining multiple rows, it would not know what value to show for columns not in group by clause or inside a aggregate funciton. 
+- When you use GROUP BY, every column you select must be inside of an aggregate function OR in the GROUP BY clause. Since GROUP BY is grouping/combining multiple rows, it would not know what value to show for columns that are not in group by clause or inside a aggregate funciton. 
 ```sql
 SELECT COUNT(item), orderID
 FROM table
@@ -76,7 +76,14 @@ ORDER BY total_items DESC;
 
 **Joins**:
 **Unions**:
-**Scalar Functions**:
+
+**Scalar Functions**: built in functions that operate on 1 single value and return 1 single value. Usually used for data cleaning and manipulation.
+ - USCASE(value): converts string to uppercase
+ - LCASE(value): converts string to lowercase
+
+
+
+
 **Conditionals (CASE Expressions)**:
 **Subqueries**:
 **Transactions**:
