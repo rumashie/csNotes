@@ -6,7 +6,9 @@ Keywords:
 - **ORDER BY ASC|DESC**: order by organize the result set in ascending or descending (ASC is default if no value given) order based on given columns. You can ORDER BY multiple columns, they will be organized by the columns orders the first column will take precedent.
 - **AND**, **OR**: AND, OR operators to use in WHERE clauses to create conditionals
 - **IN**: allows you to specify multiple values in a WHERE clause
+   ```sql
 	- SELECT * FROM table WHERE column IN (value1, value2, value3);
+   ```
 - **NOT**: negates some condition. NOT takes precedence before all operators except parenthesis (). Use parenthesis to clarify statements you are negating.
 	- WHERE NOT importKey < 10 is parsed as WHERE (NOT importKey) > 10 because NOT has higher precedence than comparison operators.
 	- Instead, WHERE NOT (importKey < 10) 
