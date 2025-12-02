@@ -65,223 +65,225 @@ SQL **commands** can be divided into two main categories:
 
 ## DDL Commands (Data Definition Language)
 
-    ### Creating New Tables
-    To create a new table, use the `CREATE TABLE` command, followed by the table name and a list of columns and their data types.
+### CREATE TABLE
 
-    ```sql
-    CREATE TABLE table_name (
-        column_name DATA_TYPE,
-        column_name DATA_TYPE,
-        column_name DATA_TYPE
-    );
-    ```
+To create a new table, use the `CREATE TABLE` command, followed by the table name and a list of columns and their data types.
 
-    Every column must have a data type, and values inserted need to adhere to that column's definition. In addition to specifying the column's data type, columns can also include **constraints**:
+```sql
+CREATE TABLE table_name (
+    column_name DATA_TYPE,
+    column_name DATA_TYPE,
+    column_name DATA_TYPE
+);
+```
 
-    **Set a column as the Primary Key:**
-    ```sql
-    CREATE TABLE table_name (
-        column_name DATA_TYPE PRIMARY KEY,
-        column_name DATA_TYPE,
-        column_name DATA_TYPE
-    );
-    ```
+Every column must have a data type, and values inserted need to adhere to that column's definition. In addition to specifying the column's data type, columns can also include **constraints**:
 
-    **Set a column as the Foreign Key:**
-    ```sql
-    CREATE TABLE table_name (
-        column_name DATA_TYPE,
-        column_name2 DATA_TYPE,
-        FOREIGN KEY (column_name2) REFERENCES other_table(column_name2)
-    );
-    ```
+**Set a column as the Primary Key:**
+```sql
+CREATE TABLE table_name (
+    column_name DATA_TYPE PRIMARY KEY,
+    column_name DATA_TYPE,
+    column_name DATA_TYPE
+);
+```
 
-    **Set a column to be NOT NULL:** Not allowed to be empty. Multiple constraints can be applied to the same column.
-    ```sql
-    CREATE TABLE table_name (
-        column_name DATA_TYPE PRIMARY KEY NOT NULL,
-        column_name DATA_TYPE,
-        column_name DATA_TYPE
-    );
-    ```
+**Set a column as the Foreign Key:**
+```sql
+CREATE TABLE table_name (
+    column_name DATA_TYPE,
+    column_name2 DATA_TYPE,
+    FOREIGN KEY (column_name2) REFERENCES other_table(column_name2)
+);
+```
 
-    **Assign a column a Default value:** This value will be used if no other value is given.
-    ```sql
-    CREATE TABLE table_name (
-        column_name DATA_TYPE DEFAULT 0,
-        column_name DATA_TYPE,
-        column_name DATA_TYPE
-    );
-    ```
+**Set a column to be NOT NULL:** Not allowed to be empty. Multiple constraints can be applied to the same column.
+```sql
+CREATE TABLE table_name (
+    column_name DATA_TYPE PRIMARY KEY NOT NULL,
+    column_name DATA_TYPE,
+    column_name DATA_TYPE
+);
+```
 
-    **Add a CHECK constraint:** CHECK validates data before insertion. If the value fails the CHECK constraint, the data will not be inserted, and the DBMS will throw an error.
-    ```sql
-    CREATE TABLE table_name (
-        column_name DATA_TYPE,
-        column_name DATA_TYPE CHECK (column_name = 'student'),
-        column_name DATA_TYPE CHECK (column_name > 100)
-    );
-    ```
+**Assign a column a Default value:** This value will be used if no other value is given.
+```sql
+CREATE TABLE table_name (
+    column_name DATA_TYPE DEFAULT 0,
+    column_name DATA_TYPE,
+    column_name DATA_TYPE
+);
+```
 
-    **Use Auto-increment:** Allows a unique number to be generated automatically when a new record is inserted into a table.
+**Add a CHECK constraint:** CHECK validates data before insertion. If the value fails the CHECK constraint, the data will not be inserted, and the DBMS will throw an error.
+```sql
+CREATE TABLE table_name (
+    column_name DATA_TYPE,
+    column_name DATA_TYPE CHECK (column_name = 'student'),
+    column_name DATA_TYPE CHECK (column_name > 100)
+);
+```
 
-    For MySQL:
-    ```sql
-    CREATE TABLE table_name (
-        column_name INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-        column_name DATA_TYPE,
-        column_name DATA_TYPE
-    );
-    ```
+**Use Auto-increment:** Allows a unique number to be generated automatically when a new record is inserted into a table.
 
-    For SQL Server:
-    ```sql
-    CREATE TABLE table_name (
-        column_name INT IDENTITY(1,1) PRIMARY KEY,
-        column_name DATA_TYPE,
-        column_name DATA_TYPE
-    );
-    ```
+For MySQL:
+```sql
+CREATE TABLE table_name (
+    column_name INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    column_name DATA_TYPE,
+    column_name DATA_TYPE
+);
+```
 
-    ### Modifying Table Structure
+For SQL Server:
+```sql
+CREATE TABLE table_name (
+    column_name INT IDENTITY(1,1) PRIMARY KEY,
+    column_name DATA_TYPE,
+    column_name DATA_TYPE
+);
+```
 
-    The `ALTER TABLE` command is used to modify columns in an existing table, including adding and deleting columns. It can also be used to add or remove constraints on tables.
+### ALTER
 
-    **Add a new column to an existing table:**
-    ```sql
-    ALTER TABLE table_name
-    ADD column_name DATA_TYPE;
-    ```
+The `ALTER TABLE` command is used to modify columns in an existing table, including adding and deleting columns. It can also be used to add or remove constraints on tables.
 
-    **Remove a column from a table:**
-    ```sql
-    ALTER TABLE table_name
-    DROP COLUMN column_name;
-    ```
+**Add a new column to an existing table:**
+```sql
+ALTER TABLE table_name
+ADD column_name DATA_TYPE;
+```
 
-    **Rename a column:**
-    ```sql
-    ALTER TABLE table_name
-    RENAME COLUMN old_name TO new_name;
-    ```
+**Remove a column from a table:**
+```sql
+ALTER TABLE table_name
+DROP COLUMN column_name;
+```
 
-    For SQL Server:
-    ```sql
-    EXEC sp_rename 'table_name.old_name', 'new_name', 'COLUMN';
-    ```
+**Rename a column:**
+```sql
+ALTER TABLE table_name
+RENAME COLUMN old_name TO new_name;
+```
 
-    **Change the data type of a column:**
-    ```sql
-    ALTER TABLE table_name
-    ALTER COLUMN column_name DATA_TYPE;
-    ```
+For SQL Server:
+```sql
+EXEC sp_rename 'table_name.old_name', 'new_name', 'COLUMN';
+```
 
-    **Modify column constraints:**
-    ```sql
-    ALTER TABLE table_name
-    ALTER COLUMN column_name DATA_TYPE [constraints];
-    ```
+**Change the data type of a column:**
+```sql
+ALTER TABLE table_name
+ALTER COLUMN column_name DATA_TYPE;
+```
 
-    ### Deleting Tables and Data
+**Modify column constraints:**
+```sql
+ALTER TABLE table_name
+ALTER COLUMN column_name DATA_TYPE [constraints];
+```
 
-    **Delete an entire table:**
-    ```sql
-    DROP TABLE table_name;
-    ```
+### DROP and TRUNCATE
 
-    **Delete all data inside a table (but keep the table structure):**
-    ```sql
-    TRUNCATE TABLE table_name;
-    ```
+**Delete an entire table:**
+```sql
+DROP TABLE table_name;
+```
+
+**Delete all data inside a table (but keep the table structure):**
+```sql
+TRUNCATE TABLE table_name;
+```
 
 ## DML Commands (Data Manipulation Language)
 
-    ### Selecting Data
+### SELECT
 
-    Once the table is created, you can query the data.
+Once the table is created, you can query the data.
 
-    **Select all columns or specify the columns from a table:**
-    ```sql
-    SELECT * FROM table_name;
-    ```
+**Select all columns or specify the columns from a table:**
+```sql
+SELECT * FROM table_name;
+```
 
-    ```sql
-    SELECT column1, column2 FROM table_name;
-    ```
+```sql
+SELECT column1, column2 FROM table_name;
+```
 
-    **Add conditions with WHERE clause:**
-    ```sql
-    SELECT * FROM table_name
-    WHERE {condition};
-    ```
+**Add conditions with WHERE clause:**
+```sql
+SELECT * FROM table_name
+WHERE {condition};
+```
 
-    ### Inserting New Data
-    To add new records into a table, use the `INSERT INTO` command. There are two ways to use it:
+### INSERT INTO
+To add new records into a table, use the `INSERT INTO` command. There are two ways to use it:
 
-    **1. Specify column names and values:**
-    ```sql
-    INSERT INTO table_name (column1, column3, column6)
-    VALUES (value1, value3, value6);
-    ```
+**1. Specify column names and values:**
+```sql
+INSERT INTO table_name (column1, column3, column6)
+VALUES (value1, value3, value6);
+```
 
-    **2. Insert values for all columns:** If you are adding values for all columns, you do not need to specify the column names. But the values must be in the same order as the columns in the table.
-    ```sql
-    INSERT INTO table_name
-    VALUES (value1, value2, value3);
-    ```
+**2. Insert values for all columns:** If you are adding values for all columns, you do not need to specify the column names. But the values must be in the same order as the columns in the table.
+```sql
+INSERT INTO table_name
+VALUES (value1, value2, value3);
+```
 
-    #### Copying Data Between Tables
-    **SELECT INTO (SQL Server only, not PostgreSQL):** Copies data from one table into a new table.
+#### Copying Data Between Tables
+**SELECT INTO (SQL Server only, not PostgreSQL):** Copies data from one table into a new table.
 
-    ```sql
-    SELECT *
-    INTO newtable
-    FROM oldtable;
-    ```
+```sql
+SELECT *
+INTO newtable
+FROM oldtable;
+```
 
-    Copy only specified columns:
-    ```sql
-    SELECT column1, column2
-    INTO newtable
-    FROM oldtable;
-    ```
+Copy only specified columns:
+```sql
+SELECT column1, column2
+INTO newtable
+FROM oldtable;
+```
 
-    Add conditions:
-    ```sql
-    SELECT *
-    INTO newtable
-    FROM oldtable
-    WHERE {condition};
-    ```
+Add conditions:
+```sql
+SELECT *
+INTO newtable
+FROM oldtable
+WHERE {condition};
+```
 
-    **INSERT INTO SELECT:** Copies data from one table and inserts it into another existing table.
-    ```sql
-    INSERT INTO table2
-    SELECT * FROM table1
-    WHERE {condition};
-    ```
+**INSERT INTO SELECT:** Copies data from one table and inserts it into another existing table.
+```sql
+INSERT INTO table2
+SELECT * FROM table1
+WHERE {condition};
+```
 
-    ### Updating Data
-    To update data inside a table, use the `UPDATE` command.
-    ```sql
-    UPDATE table_name
-    SET column_name = new_value
-    WHERE {condition};
-    ```
+### UPDATE
+To update data inside a table, use the `UPDATE` command.
+```sql
+UPDATE table_name
+SET column_name = new_value
+WHERE {condition};
+```
 
-    **Update multiple columns:**
-    ```sql
-    UPDATE table_name
-    SET column1 = value1, column2 = value2
-    WHERE {condition};
-    ```
-    Without a `WHERE` clause every row in the table is updated!
+**Update multiple columns:**
+```sql
+UPDATE table_name
+SET column1 = value1, column2 = value2
+WHERE {condition};
+```
+Without a `WHERE` clause every row in the table is updated!
 
-    ### Deleting Data
-    **Delete specific rows based on conditions:**
-    ```sql
-    DELETE FROM table_name
-    WHERE {condition};
-    ```
+### DELETE
+**Delete specific rows based on conditions:**
 
-    Without a `WHERE` clause, all rows will be deleted (but the table structure remains).
+```sql
+DELETE FROM table_name
+WHERE {condition};
+```
+
+Without a `WHERE` clause, all rows will be deleted (but the table structure remains).
