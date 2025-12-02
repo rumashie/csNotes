@@ -65,7 +65,7 @@ function loadFolderContent() {
     files.forEach(file => {
         fileLinks += `
             <li>
-                <a href="files/${file.filelname}" target="_blank"> 
+                <a href="files/${file.filename}" target="_blank"> 
                     ${file.name}
                 </a>
             </li>

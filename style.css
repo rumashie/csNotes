@@ -97,30 +97,39 @@ body {
 
 
 /* Notes Page Styling */
-.notes-header{
+.notes-header {
     display: block;
     padding: 15px;
     text-decoration: none;
-    color: #5c7cfa;
+    color: #bbbbbb;
     font-weight: bold;
+    transition: color 0.2s ease;
+}
+.notes-header:hover{
+    color: #1e1d1d;
+
 }
 
+
 #content, #folder-title{
-    display: block;
-    margin: 20px;
+    /* display: block; */
+    margin-left: 20px;
+    
 }
 
 #content ul {
-    list-style: none;
-    padding: 0;
+    /* list-style: none; */
+    /* padding: 0; */
+    margin-left: 10px;
 }
 
 #content a {
     display: block;
+    width: 100px;
     padding: 10px;
     margin: 8px 0;
-    background: white;
-    border-left: 3px solid #5c7cfa;
+    background: rgb(255, 255, 255);
+    /* border-left: 3px solid #5c7cfa; */
     text-decoration: none;
     color: #333;
 }
