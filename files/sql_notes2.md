@@ -7,7 +7,7 @@ Keywords:
 - **AND**, **OR**: AND, OR operators to use in WHERE clauses to create conditionals
 - **IN**: allows you to specify multiple values in a WHERE clause
    ```sql
-	- SELECT * FROM table WHERE column IN (value1, value2, value3);
+	SELECT * FROM table WHERE column IN (value1, value2, value3);
    ```
 - **NOT**: negates some condition. NOT takes precedence before all operators except parenthesis (). Use parenthesis to clarify statements you are negating.
 	- WHERE NOT importKey < 10 is parsed as WHERE (NOT importKey) > 10 because NOT has higher precedence than comparison operators.
@@ -51,7 +51,6 @@ SELECT SUM(column) FROM table_name;
 SELECT AVG(column) FROM table_name;
 ```
 
-
 **LIKE Operator**: Used to build WHERE clauses to search for a specified pattern in a column
 ```sql
 SELECT * FROM table_name WHERE column LIKE '%xyz_';
@@ -61,21 +60,31 @@ SELECT * FROM table_name WHERE column LIKE '%xyz_';
 	- _ represents one, single character
 
 
-**Group By**: 
+**Group By**: groups rows that have the same balues into summary rows. GROUP BY statements are often used with aggregate functions to group result-set by one or more columns.
+- When you use GROUP BY, every column you select must be inside of an aggregate function OR in the GROUP BY clause. Since GROUP BY is grouping/combining multiple rows, it would not know what value to show for columns not in group by clause or inside a aggregate funciton. 
+```sql
+SELECT COUNT(item), orderID
+FROM table
+GROUP BY orderID;
+
+-- Find the orders with the most items
+SELECT COUNT(item) AS total_items, orderID
+FROM table
+GROUP BY orderID
+ORDER BY total_items DESC;
+```
 
 **Joins**:
 **Unions**:
-
 **Scalar Functions**:
-Conditionals (CASE Expressions):
-
+**Conditionals (CASE Expressions)**:
 **Subqueries**:
 **Transactions**:
-
 **CTE (Common Table Expressions)**:
 **Stored Procedures**:
 - Temp Tables
 **Views**
+
 
 indexes 
 Window function
