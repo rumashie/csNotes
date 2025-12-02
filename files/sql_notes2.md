@@ -14,10 +14,10 @@ Keywords:
 	- Instead, WHERE NOT (importKey < 10) 
 - **BETWEEN**: selects values within a given range. The values can be numbers, text, or dates. The BETWEEN operator is inclusive: begin and end values are included (be careful with dates without time, parts of the day may not be included). 
 - **AS**: keyword to create aliases, creates a 'nickname' for database objects (tables, columns, databases). you can skip the AS keyword and create an ALIAS. You can refer to an object using its alias. 
-	- ```sql
+ ```sql
    SELECT * FROM table AS t;
    SELECT * FROM table t;    
-   		```
+  ```
 
 SQL Standard Precedence (highest to lowest):
 	- (): parentheses
