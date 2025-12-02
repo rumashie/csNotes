@@ -293,3 +293,16 @@ WHERE {condition};
 Without a `WHERE` clause, all rows will be deleted (but the table structure remains).
 
 ### MERGE
+Update one table (target table) with data from another table (source table) based on a matching condition.
+- If a match is found UPDATE the row in the target table
+- If no mathc is found INSERT a new row into the target table
+
+```sql
+MERGE INTO target_table t
+USING source_table s
+ON (t.id = s.id)
+WHEN MATCHED THEN
+    UPDATE SET t.value = s.value
+WHEN NOT MATCHED THEN
+    INSERT (id, value) VALUES (s.id, s.value)
+```
