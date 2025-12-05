@@ -10,6 +10,20 @@ const folderData = {
                 filelink: "https://github.com/rumashie/csNotes/blob/main/files/sql_notes1.md",
                 description: "basic sql notes",
                 type: "markdown",
+            },
+             {
+                name: "sql notes 2",
+                filename: "sql_notes2.html",
+                filelink: "https://github.com/rumashie/csNotes/blob/main/files/sql_notes2.md",
+                description: "more sql notes",
+                type: "markdown",
+            },
+            {
+                name: "sql notes 3",
+                filename: "sql_notes3.html",
+                filelink: "https://github.com/rumashie/csNotes/blob/main/files/sql_notes3.md",
+                description: "more sql notes",
+                type: "markdown",
             }
         ]
     },
