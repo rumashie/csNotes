@@ -75,24 +75,37 @@ GROUP BY orderID
 ORDER BY total_items DESC;
 ```
 
-**Joins**:
-**Unions**:
 
 **Scalar Functions**: built in functions that operate on 1 single value and return 1 single value. Usually used for data cleaning and manipulation.
- - USCASE(value): converts string to uppercase
- - LCASE(value): converts string to lowercase
+- UPPER(value): converts string to uppercase
+- LOWER(value): converts string to lowercase
+- CAST(value AS data_type): converts data type of value SELECT CAST('2025-08-25' AS datetime)
+- COALESCE(expression, value): returns the first non-NULL value in the list SELECT COALESCE(NULL, NULL, 'first non-null', 'second') returns 'first non-null'
+- GETDATE(), CURRENT_TIMESTAMP, DAY(date), MONTH(date), YEAR(date)...
+- CONCAT(string1, string2, ...): adds two or more strings 
+-LEFT(string, X): extracts X characters from a string 
+-TRIM(value): removes leading and trailing spaces from a string (LTRIM(RTRIM(value)) for older versions of sql server)
+- many more...
 
 
+**Conditionals (CASE Expressions)**: using the CASE expression you can set up conditionals (if-then-else statements). The expression will go through the conditions sequentially and returns a value when the first condition is met. Once a condition is true, it will stop reading the remaniding conditions. 
 
+CASE expressions must be aliased when used in SELECT statements.
 
-**Conditionals (CASE Expressions)**:
-**Subqueries**:
-**Transactions**:
-**CTE (Common Table Expressions)**:
-**Stored Procedures**:
-- Temp Tables
-**Views**
+```sql
+CASE
+	WHEN condition1 THEN result1
+	WHEN condition2 THEN result2
+	WHEN conidtion3 THEN result3
+	ELSE result
+END AS {ALIAS};
+```
 
-
-indexes 
-Window function
+Searched CASE: Compare one value (column/expression) to multiple values:
+```sql
+CASE value
+	WHEN value1 THEN result1
+	WHEN value2 THEN result2
+	ELSE value3
+END
+```
