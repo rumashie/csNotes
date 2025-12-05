@@ -1,4 +1,4 @@
-#### SQL Notes 2
+### SQL Notes 2
 Keywords:
 - **DISTINCT**: when added to SELECT keyword 'SELECT DISTINCT' removes duplicates from result set
 - **TOP / LIMIT**: limit the total rows in the result set
