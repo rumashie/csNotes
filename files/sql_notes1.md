@@ -9,7 +9,7 @@ Relational databases are tabular. They are made up of Tables, which are made up 
 
 - **Attributes**: an attribute is a named property or characteristic that can take values from a specific domain (a set of allowed value), just like a column. 
 
-Note:  in a proper relation, no two tuples can be identical. This is because a relation is a set of tuples, and sets don't have duplicates. This is why database tables should have primary keys, to ensure each row is unique.
+Note:  in a proper relation, no two tuples can be identical. This is because a relation is a *set* of tuples, and sets don't have duplicates. This is why database tables should have primary keys, to ensure each row is unique.
 
 **Primary Key**: A column that uniquely identifies each row in a table. No two rows can have the same primary key value, ensuring each value returns exactly one row. A combination of more than one column can also serve as a table's primary key; when a set of columns is used, it is called a **composite key**.
 
