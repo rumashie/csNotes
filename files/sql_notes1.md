@@ -4,7 +4,9 @@
 Relational databases are tabular. They are made up of Tables, which are made up of Columns and Rows. Rooted in relational algebra and set theory, Tables are also referred to as **relations**, rows as **tuples**, and columns as **attributes**.
 
 **Relation**: is a subset of the Cartesian product of sets. set1 = {1, 2} and set2 = {A, B}, set1 × set2 = {(1,A), (1,B), (2,A), (2,B)}. A relation is the result, or any subset of those pairs. A database table can be thought of as a relation, a set of  related values organized in a structure way. 
+
 **Tuples**: a tuple is an ordered collection of values, just like a row. Each row can be thought of as a single, complete unit of data. 
+
 **Attributes**: an attribute is a named property or characteristic that can take values from a specific domain (a set of allowed value), just like a column. 
 
 Note:  in a proper relation, no two tuples can be identical. This is because a relation is a set of tuples, and sets don't have duplicates. This is why database tables should have primary keys, to ensure each row is unique.
