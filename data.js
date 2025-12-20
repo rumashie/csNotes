@@ -81,7 +81,7 @@ function loadFolderContent() {
 
     // Step 3: Update page title and header with data in folder info
     document.getElementById('page-title').textContent = data.title;
-    document.getElementById('folder-title').textContent = data.title;
+    // document.getElementById('folder-title').textContent = data.title;
     // document.getElementById('folder-description').textContent = data.description;
     
     // Step 4: Create file links for ALL files found in folder data. Lists them in bullet points
