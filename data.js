@@ -40,6 +40,19 @@ const folderData = {
         ]
 
     },
+    backend: {
+        title: "backend concepts",
+        description: "client-server communication, networking protocols, backend framworks",
+        files: [
+            {
+                name: "backend notes 1",
+                filename: "backend_notes.md",
+                filelink: "https://github.com/rumashie/csNotes/blob/main/files/backend_notes.md",
+                description: "intro to backend",
+                type: "markdown"
+            }
+        ]
+    }
 };
 
 // Get the folder parameter from URL (e.g., ?folder=sql)
