@@ -2,7 +2,7 @@
 
 #### How the internet works
 
-The internet is a "network of networks". {graphic}
+The internet is a "network of networks". 
 
 It connects devices together using a set of _standardized protocols_. There are many different devices and tools that help faciliate this...  
 There are _routers_ that recieve the data being exchanged in packets. A router examines the packet and forwards the packet to the next router in the path towards its destination.
@@ -57,3 +57,4 @@ A response contains:
 Clarifications:
 
 - A browser is software that acts as a client that can make HTTP requests, giving you access to the internet and rendering web applications. You can build local apps without a browser, but a browser is required to display web-based applications.
+
