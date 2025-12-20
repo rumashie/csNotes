@@ -46,7 +46,7 @@ const folderData = {
         files: [
             {
                 name: "backend notes 1",
-                filename: "backend_notes.md",
+                filename: "backend_notes.html",
                 filelink: "https://github.com/rumashie/csNotes/blob/main/files/backend_notes.md",
                 description: "intro to backend",
                 type: "markdown"
