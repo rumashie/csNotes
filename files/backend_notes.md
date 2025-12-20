@@ -37,7 +37,6 @@ More Details:
 
 HTTP is an application layer protocol, it runs on top of other layers of the network protocol stack. For example, connecting to Wi-Fi is part of the lower level network stack. Wi-Fi happens at the physical and link layers, providing network access. Client-server HTTP/HTTPS is communication over the internet once network connection exists. {graphic} HTTP protocol is sent over TCP and TLS connection.
 
-![alt text](image.png)
 
 HTTP invovles a client device making a request to a server, which sends a response message.
 
@@ -57,4 +56,5 @@ A response contains:
 Clarifications:
 
 - A browser is software that acts as a client that can make HTTP requests, giving you access to the internet and rendering web applications. You can build local apps without a browser, but a browser is required to display web-based applications.
+
 
